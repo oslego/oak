@@ -1,0 +1,10 @@
+Oak.js is a lightweight, stand-alone JavaScript localization framework.
+It supports multiple resource packages, fallbacks to default locale, parameter replacement within strings.
+
+For code samples and documentation check out
+http://bitesizebugs.com/lab/oak
+
+ROADMAP
+-----------------
+* locale-aware date formatting
+
