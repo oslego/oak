@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Oak - Simple JavaScript Localization Framework</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+	
+	<script type="text/javascript" src="oak.js"></script>
+	<script type="text/javascript">
+	
+		var en_US = {
+			label: {
+				days_ago: "{0} days ago",
+				hours_ago: "{0} hours ago"
+			},
+		
+			prompt: {
+				sign_in: "Sign In",
+				welcome: "Hi there, {0}!"
+			}
+		}
+	
+		var ro_RO = {
+			label: {
+				days_ago: "acum {0} zile",
+				hours_ago: "acum {0} ore"
+			},
+
+			prompt: {
+				sign_in: "Autentificare",
+				welcome: "Salut {0}!"
+			}
+		}
+	
+		var l10n = new Oak();
+		l10n.setDictionary("en_US", en_US);
+		l10n.setDictionary("ro_RO", ro_RO);
+		
+		l10n.getString('label.hours_ago', 24)
+		l10n.setDefaultLocale("ro_RO")
+		l10n.getString('label.hours_ago', 20)
+		
+		console.log(l10n.getString('prompt.welcome', "Razvan"))
+		
+	</script>
+</body>
+</html>
